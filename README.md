@@ -12,6 +12,7 @@
 - `ssh -i "jmttrailhead.pem" ubuntu@ec2-54-173-211-23.compute-1.amazonaws.com`
 - Navigate to repository `jmttrailhead`
 - Run `sudo git pull --rebase origin`
-- Run `sudo npm install` 
-- Navigate into `/client` and run `sudo npm install` 
+- Run `sudo npm install` if new packages exist
+- Navigate into `/client` and run `sudo npm install`  if new packages exist
+- Run ``
 - Run `sudo reboot` and this should kill Ubunto console and restart the website
