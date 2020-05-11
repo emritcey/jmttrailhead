@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import Bannerimg from '../src/components/Bannerimg';
 
 class App extends Component {
     state = {
@@ -26,23 +27,10 @@ class App extends Component {
       return (
         <div className="App">
           <Bannerimg />
-
-
           <header className="App-header">
-                  <h1>John Muir Trail Planning</h1>
-                  <h2> Stuff for the website </h2>
-                  <h3> More stuff </h3>
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+              <h1>John Muir Trail Planning</h1>
+              <h2> Stuff for the website </h2>
+              <h3> More stuff </h3>
           </header>
         </div>
       );
