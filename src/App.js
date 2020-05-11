@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './App.css';
 
 class App extends Component {
-
     state = {
         data: null
     };
@@ -15,6 +14,7 @@ class App extends Component {
         try {
             const response = await fetch('/express_backend');
             const body = await response.json();
+            console.log(body);
             this.setState({ data: body.express });
         } catch(err) {
             throw Error(err)
