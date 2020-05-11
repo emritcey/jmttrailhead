@@ -1,0 +1,51 @@
+/* All in one selector */
+.bannerimagetag {
+    border: "100px";
+    color: "white";
+    backgroundColor: "DodgerBlue";
+    padding: "0px";
+    fontFamily: "Arial";
+    width: "100%";
+}
+.other {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-radius: 4px;
+    padding: 5px;
+
+}
+section.stretch{ float: left; height: 15;
+    background-color: red;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-radius: 40px;
+    padding: 15px;}
+header.homeHeader {background-color: blue}
+
+ul#menuItems
+{
+    background:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    width:500px;
+    background-color:white;
+}
+
+ul#menuItems li
+{
+    /*display:inline;
+    margin-left:auto;
+    margin-right:auto;
+    top:0px;
+    height:50px;*/
+    display:inline-block;
+    list-style:none;
+    padding:10px 1%;
+    margin:0;
+    width:31%;
+}

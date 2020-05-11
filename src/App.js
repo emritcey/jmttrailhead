@@ -25,7 +25,13 @@ class App extends Component {
   render () {
       return (
         <div className="App">
+          <Bannerimg />
+
+
           <header className="App-header">
+                  <h1>John Muir Trail Planning</h1>
+                  <h2> Stuff for the website </h2>
+                  <h3> More stuff </h3>
             <p>
               Edit <code>src/App.js</code> and save to reload.
             </p>
