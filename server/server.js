@@ -1,8 +1,14 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require("body-parser");
+
+// Middleware
+const GetAllFromGear = require("./Middleware/GetAllFromGear");
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+app.use(bodyParser.json());
 
 app.use("/static", express.static(path.resolve(__dirname, "../build/static")));
 
@@ -11,8 +17,11 @@ app.get('/', (req, res) => {
 });
 
 // create a GET route
-app.get('/express_backend', (req, res) => {
-    res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+app.get('/express_backend', GetAllFromGear, (req, res) => {
+    res.send({
+        express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT',
+        data: res.locals.data,
+     });
 });
 
 // console.log that your server is up and running
