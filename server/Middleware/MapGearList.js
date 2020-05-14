@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
 		if (!gear[item.category_name]) {
 			gear[item.category_name] = [];
 		}
-			gear[item.category_name].push({id: item.id, name: item.item_name});
+			gear[item.category_name].push({id: item.id, name: item.item_name, note: item.notes});
 	});
 
 	res.locals.data = gear;

@@ -1,5 +1,5 @@
 CREATE TABLE gear_categories (
-  id int PRIMARY KEY,
+  id int PRIMARY KEY SERIAL,
   category_name VARCHAR(50) NOT NULL,
   category_order INT
 );
@@ -14,8 +14,11 @@ VALUES
     (6, 'Miscellaneous', 6);
 
 CREATE TABLE gear_items (
- id int PRIMARY KEY,
+ id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
  item_name VARCHAR(50) NOT NULL,
+ category_id INT NOT NULL,
+ category_id INT NOT NULL,
+ category_id INT NOT NULL,
  category_id INT NOT NULL,
  FOREIGN KEY (category_id)
         REFERENCES gear_categories (id)
