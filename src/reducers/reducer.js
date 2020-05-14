@@ -1,5 +1,5 @@
 const initialState = {
-  packingList: [],
+  packingList: {},
 };
 
 export default (state = initialState, action) => {

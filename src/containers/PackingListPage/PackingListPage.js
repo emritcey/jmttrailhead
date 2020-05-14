@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -33,6 +33,21 @@ export default () => {
 
   const classes = useStyles();
 
+  const [checked, setChecked] = useState([0]);
+
+  const handleToggle = (value) => () => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+
+    setChecked(newChecked);
+  };
+
   const fetchPackingList = async() => {
       const response = await fetch('/packing_list');
       const body = await response.json();
@@ -41,41 +56,44 @@ export default () => {
 
   useEffect(() => {
     fetchPackingList().then(body => {
-      console.log(body.data);
       dispatch(buildPackingList(body.data));
     })
     .catch((err) => {
-      throw new Error(err);
+      console.log(err);
     });
   }, [dispatch]);
 
   return (
     <Container>
-        <main>
-          <Link to="/">Home</Link>
-          <List className={classes.root}>
-              {Object.keys(packingList).map((category, index) => {
+      <main>
+        <Link to="/">Home</Link>
+        <List className={classes.root}>
+          {Object.keys(packingList).map((category, index) => {
+            return (
+              <section key={index}>
+                <ListItem className={classes.category} dense button>
+                  <ListItemText primary={`${category}`} />
+                </ListItem>
+                {packingList[category].map((item) => {
                   return (
-                    <section key={index}>
-                      <ListItem className={classes.category} dense button>
-                        <ListItemText primary={`${category}`} />
-                      </ListItem>
-                      {packingList[category].map((item) => {
-                        return (
-                          <ListItem className={classes.listItem} key={item.id} dense button>
-                            <ListItemIcon>
-                              <Checkbox color="primary" />
-                            </ListItemIcon>
-                            <ListItemText primary={`${item.name}`} />
-                          </ListItem>
-                        );
-                      })}
-                    </section>
+                    <ListItem className={classes.listItem} key={item.id} dense button onClick={handleToggle(item.id)}>
+                      <ListItemIcon>
+                        <Checkbox
+                          checked={checked.indexOf(item.id) !== -1}
+                          color="primary" />
+                      </ListItemIcon>
+                      <ListItemText primary={item.name}
+                                    secondary={item.note} />
+
+                    </ListItem>
                   );
-              })}
-          </List>
-        </main>
+                })}
+              </section>
+            );
+          })}
+        </List>
+      </main>
 
     </Container>
   );
-};
+}
