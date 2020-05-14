@@ -1,46 +1,28 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import PackingListPage from "./containers/PackingListPage/PackingListPage";
+import HomePage from "./containers/HomePage/HomePage";
 
-class App extends Component {
-    state = {
-        data: null
-    };
-
-    componentDidMount() {
-        this.callBackendAPI();
-    }
-    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-    callBackendAPI = async () => {
-        try {
-            const response = await fetch('/express_backend');
-            const body = await response.json();
-            console.log(body);
-            this.setState({ data: body.express });
-        } catch(err) {
-            throw Error(err)
-        }
-        return;
-    };
-
-  render () {
-      return (
-        <div className="App">
-          <header className="App-header">
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+const App = () => {
+  return (
+      <Router>
+        <div>
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/packing" component={PackingListPage} />
+                <Route path="*">
+                    <Redirect to="/" />
+                </Route>
+            </Switch>
         </div>
-      );
-  }
+    </Router>
+  );
 }
 
 export default App;

@@ -33,3 +33,7 @@ If changes were made to `www.jmttrailhead.com.config` AKA Nginx:
 - `sudo systemctl start nginx.service`
 - `sudo systemctl enable nginx.service`
 - Check if nginx server is running by running `sudo systemctl status nginx.service`
+
+**Files to build manually**
+- jmttrrailhead.pem
+- Keys.js

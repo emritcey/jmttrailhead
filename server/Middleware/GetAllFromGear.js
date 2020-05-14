@@ -12,7 +12,8 @@ const client = new Client({
 client.connect();
 
 module.exports = (req, res, next) => {
-    client.query('SELECT * from gear', (err, data) => {
+    const query= "SELECT gear_items.id, gear_items.item_name, gear_categories.category_name FROM gear_items INNER JOIN gear_categories on gear_items.category_id=gear_categories.id;";
+    res.locals.client.query(query, (err, data) => {
         err ? res.locals.error = err : res.locals.data = data.rows;
         return next();
     });
