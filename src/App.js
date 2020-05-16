@@ -12,11 +12,15 @@ import ProfilePage from "./containers/ProfilePage/ProfilePage";
 import LoginPage from "./containers/LoginPage/LoginPage";
 import UserProvider from "./context/UserProvider";
 import PrivateRoute from "./components/PrivateRoute";
+import Bannerimg from "./containers/Bannerimg/Bannerimg.js";
+import Nav_underline from "./containers/Nav_underline/Nav_underline";
 
 const App = () => {
   return (
       <Router>
         <div>
+          <Bannerimg />
+          <Nav_underline />
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/login" component={LoginPage} />
