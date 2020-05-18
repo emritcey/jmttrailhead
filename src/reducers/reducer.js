@@ -1,5 +1,6 @@
 const initialState = {
   packingList: {},
+  currentUser: {},
 };
 
 export default (state = initialState, action) => {
@@ -8,6 +9,17 @@ export default (state = initialState, action) => {
       return {
         ...state,
         packingList: action.payload,
+      }
+    case 'SET_CURRENT_USER':
+      console.log(action.payload);
+      return {
+        ...state,
+        currentUser: action.payload,
+      }
+    case 'LOGOUT':
+      return {
+        ...state,
+        currentUser: {},
       }
     default: return state;
   }

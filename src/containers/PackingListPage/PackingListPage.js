@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import {createStyles, makeStyles} from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import IconButton from '@material-ui/core/IconButton';
 import PrintIcon from '@material-ui/icons/Print';
 
 import PackingListComponent from "./components/PackingListComponent";
-import {createStyles, makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -23,6 +23,7 @@ export default () => {
   const print = () => {
     window.print();
   }
+
   return (
     <Container className="packing-list-page">
       <header>
