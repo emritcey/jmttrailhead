@@ -1,27 +1,25 @@
 import React from 'react';
 import './assets/css/main.scss';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
+
 import PackingListPage from "./containers/PackingListPage/PackingListPage";
 import HomePage from "./containers/HomePage/HomePage";
+import Bannerimg from "./containers/Bannerimg/Bannerimg.js";
+import Nav_underline from "./containers/Nav_underline/Nav_underline";
+
+
 
 const App = () => {
   return (
-      <Router>
-        <div>
-            <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/packing" component={PackingListPage} />
-                <Route path="*">
-                    <Redirect to="/" />
-                </Route>
-            </Switch>
-        </div>
-    </Router>
+    <div>
+  <Bannerimg />
+  <Nav_underline />
+
+</div>
+
+
+
+
+
   );
 }
 
