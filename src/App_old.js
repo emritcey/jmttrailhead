@@ -18,6 +18,7 @@ const App = () => {
         <div>
           <header className="home-header">
             <Bannerimg /><AppBar2 />
+          
           </header>
             <Switch>
                 <Route exact path="/" component={HomePage} />
