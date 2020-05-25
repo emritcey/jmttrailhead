@@ -6,7 +6,7 @@ import React, {Component } from 'react';
 class Bannerimg extends React.Component {
 render() {
     return(
-    <div>
+    <div class='bannerDiv'>
         <img className = "banner" src={bimage} />
     </div>
           );

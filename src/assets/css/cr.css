@@ -10,12 +10,16 @@ font-weight: bold;
 }
 
 .banner {
-  width: auto;
+  width: 100%;
   font-size: 30px;
-   height: 200px;
+   height: auto;
+   object-fit: contain;
 
 }
 
+.bannerDiv{
+  width:100%;
+}
 .Bannerimagetag {
   width: 100%;
   height: auto;
