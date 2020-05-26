@@ -27,7 +27,9 @@ return (
         <img  className = 'imgFrontPage' src={mountain3x5}  alt="no image"/>
         <figcaption><i>Minarets</i></figcaption>
       </figure></div>
-    <div></div><div></div><div></div><div></div><div></div>
+
+    <div class="t1"><p class="pt1">Start the JMT Here!</p></div>
+    <div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
     <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>

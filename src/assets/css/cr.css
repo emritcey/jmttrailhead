@@ -1,5 +1,7 @@
 
 /*  CR_css file   */
+
+
 h1 {
 font-weight: bold;
   color: blue;
@@ -14,6 +16,11 @@ font-weight: bold;
   font-size: 30px;
    height: auto;
    object-fit: contain;
+     border: 0px solid red;
+     padding-top:0px;
+
+     margin-top:0px;
+     border-radius: 5px;
 
 }
 
@@ -23,6 +30,7 @@ font-weight: bold;
 .Bannerimagetag {
   width: 100%;
   height: auto;
+
 }
 
 
@@ -57,12 +65,19 @@ nav ul li {
   display: inline-block;
 }
 
-/* text color when not hover  */
+/* text color when not hover
+banner image color pallet
+#204473 dark blue
+#3C74A6 med blue
+#609BBF light blue
+#D9C0A3 beige
+#A6866A  light brown*/
 nav ul li a {
   display: block;
   padding: 5px;
   text-decoration: none;
-  color: #aaa;
+  color: #609BBF
+;
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 5px;
@@ -83,7 +98,7 @@ nav ul li a:before {
 }
 /* hover text color */
 nav ul li a:hover {
-  color: #555;
+  color: #204473;
 }
 
 
@@ -104,7 +119,7 @@ nav.fill ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: black;
+  background: #204473;
   height: 2px;
 }
 nav.stroke ul li a:hover:after {
@@ -123,6 +138,6 @@ nav.fill ul li a:after {
   opacity: 0;
 }
 nav.fill ul li a:hover {
-  color: #111;
+  color: #fff;
   z-index: 1;
 }

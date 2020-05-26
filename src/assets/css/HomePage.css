@@ -1,5 +1,6 @@
 body {
   margin: 5%;
+  margin-top:2%;
 }
 
 .wrapper {
@@ -26,6 +27,21 @@ body {
 .i1{ grid-area: 1 /1/2/4;}
 .i2{ grid-area: 3/5/4/9;}
 .i3{ grid-area: 5/2/6/6;}
+.t1{ grid-area: 1/4/2/9;
+
+}
+
+.pt1 {
+  font-size:250%;
+  font-weight:900;
+  font-size-adjust: auto;
+  font-family:cursive;
+  color:#204473;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+
+}
 
 .imgFrontPage{
   border: 1px solid black;
