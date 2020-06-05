@@ -11,7 +11,6 @@ export default (state = initialState, action) => {
         packingList: action.payload,
       }
     case 'SET_CURRENT_USER':
-      console.log(action.payload);
       return {
         ...state,
         currentUser: action.payload,
