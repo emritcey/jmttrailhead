@@ -49,6 +49,7 @@ export default () => {
 	const fetchPackingList = async() => {
 		const response = await fetch('/packing_list');
 		const body = await response.json();
+		console.log(body);
 		return body;
 	};
 
