@@ -20,6 +20,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import BannerComponent from "./containers/BannerComponent/BannerComponent.js";
 import NavComponent from "./containers/NavComponent/NavComponent";
 import HomePage from "./containers/HomePage/HomePage.js";
+import HomePage2 from "./containers/HomePage/HomePage2.js";
 import MealPlan from "./containers/MealPlan/MealPlan";
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
           <BannerComponent />
           <NavComponent />
             <Switch>
-                <Route exact path="/" component={HomePage} />
+                <Route exact path="/" component={HomePage2} />
                 <Route exact path="/login" component={LoginPage} />
                 <Route exact path="/gear" component={PackingListPage} />
                 <Route exact path="/meals" component={MealPlan} />
