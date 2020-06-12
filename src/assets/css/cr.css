@@ -24,15 +24,13 @@ font-weight: bold;
 
 }
 
-.bannerDiv{
+.banner-container {
   width:100%;
 }
 .Bannerimagetag {
   width: 100%;
   height: auto;
-
 }
-
 
 .underConstruction
 { width: 50%;

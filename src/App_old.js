@@ -9,7 +9,7 @@ import {
 import PackingListPage from "./containers/PackingListPage/PackingListPage";
 import HomePage from "./containers/HomePage/HomePage";
 
-import Bannerimg from "./containers/Bannerimg/bannerimg.js";
+import BannerComponent from "./containers/BannerComponent/bannerimg.js";
 import AppBar2 from "./containers/AppBar2/AppBar2.js";
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
       <Router>
         <div>
           <header className="home-header">
-            <Bannerimg /><AppBar2 />
+            <BannerComponent /><AppBar2 />
           
           </header>
             <Switch>

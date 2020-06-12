@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import {createStyles, makeStyles} from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -27,9 +26,6 @@ export default () => {
 
   return (
     <Container className="packing-list-page">
-      <header>
-        <Link to="/">Home</Link>
-      </header>
       <main>
         <article className={classes.taskBar}>
           <IconButton

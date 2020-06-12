@@ -55,9 +55,6 @@ export default () => {
 
 	return (
 		<Container className={classes.root}>
-			<header>
-				<Link to="/">Home</Link>
-			</header>
 			<Card className={classes.card}>
 				<CardHeader className={classes.header} title="Login">
 				</CardHeader>

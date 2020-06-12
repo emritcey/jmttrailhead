@@ -1,22 +1,27 @@
-.packing-list-page {
-  @media print {
-    span, p {
-      font-size: .75rem;
-    }
+@media print {
+  nav, .banner-container {
+    display: none;
+  }
 
-    div {
-      page-break-inside: avoid;
-    }
+  .packing-list-page {
+      span, p {
+        font-size: .75rem;
+      }
 
-    .check-box {
-      padding: 0;
-    }
+      div {
+        page-break-inside: avoid;
+      }
 
-    .print-button {
-      display: none;
+      .check-box {
+        padding: 0;
+      }
+
+      .print-button {
+        display: none;
     }
   }
 }
+
 @page {
   margin: 0;
   body  {
