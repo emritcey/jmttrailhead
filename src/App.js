@@ -4,7 +4,7 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles';
 
-import theme from './assets/theme';
+import {theme} from './assets/theme';
 
 import {
   BrowserRouter as Router,

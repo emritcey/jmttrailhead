@@ -10,20 +10,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
 import { buildPackingList } from "../../../store/PackingList/actions";
-import theme from '../../../assets/theme';
 
-// const theme = createMuiTheme({
-// 	overrides: {
-// 		MuiCheckbox: {
-// 			colorSecondary: {
-// 				color: 'purple',
-// 				'&$checked': {
-// 					color: 'green',
-// 				},
-// 			},
-// 		},
-// 	},
-// });
 const useStyles = makeStyles(() =>
 	createStyles({
 		root: {
@@ -75,7 +62,7 @@ export default () => {
 	}, [dispatch]);
 
 	return (
-		<List className={classes.root} theme={theme}>
+		<List className={classes.root}>
 			{Object.keys(packingList).map((category, index) => {
 				return (
 					<section key={index}>
@@ -88,7 +75,7 @@ export default () => {
 									<ListItemIcon>
 										<Checkbox
 											className="check-box"
-											iconStyle={{fill: "#609BBF"}}
+											color="primary"
 											checked={checked.indexOf(item.id) !== -1} />
 									</ListItemIcon>
 									<ListItemText primary={item.name}
