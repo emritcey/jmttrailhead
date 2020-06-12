@@ -75,8 +75,8 @@ export default () => {
 									<ListItemIcon>
 										<Checkbox
 											className="check-box"
-											checked={checked.indexOf(item.id) !== -1}
-											color="primary" />
+											color="primary"
+											checked={checked.indexOf(item.id) !== -1} />
 									</ListItemIcon>
 									<ListItemText primary={item.name}
 																secondary={item.note} />

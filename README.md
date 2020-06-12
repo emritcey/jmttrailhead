@@ -6,7 +6,10 @@
 - React
 - Node
 - Nginx
+- Redux
 - OAuth 2.0
+- Jest
+- Enzyme 
 
 **SSL**
 - Ecryption from letsencrypt, should renew automatically every day via command in `crontab -e`

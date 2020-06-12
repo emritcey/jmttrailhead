@@ -1,6 +1,5 @@
 import React from "react";
 import {useSelector} from "react-redux";
-import {Link} from "react-router-dom";
 
 import {createStyles, makeStyles} from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -56,7 +55,6 @@ export default () => {
 	return (
 		<Container>
 			<header>
-				<Link to="/">Home</Link>
 				<LogoutButtonComponent />
 			</header>
 			<Card className={classes.card}>
